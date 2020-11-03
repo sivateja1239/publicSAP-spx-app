@@ -1,0 +1,40 @@
+.spx-card-inner-item {
+  background: #fff;
+  padding: 1em;
+  margin: 0.5em;
+
+  img {
+    background: #eee;
+    width: 100%;
+  }
+
+  li,
+  p {
+    color: #9dcbfb;
+  }
+
+  ul {
+    padding-left: 20px;
+    margin: 5px;
+  }
+
+  .launch-title {
+    color: #2b65ec;
+  }
+}
+
+.spx-card-item {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 700px) {
+  .spx-card-item {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .spx-card-item {
+    grid-template-columns: 1fr 1fr;
+  }
+}

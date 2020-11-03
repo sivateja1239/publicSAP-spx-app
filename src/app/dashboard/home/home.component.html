@@ -1,0 +1,18 @@
+
+  <div class="spx-grid component-wrapper">
+    <app-filter
+      [appliedYear]="appliedYear"
+      [isLaunched]="isLaunched"
+      [isLanded]="isLanded"
+      (applyFilters)="applyFilters($event)"
+    ></app-filter>
+    <!--Show Loader-->
+    <div *ngIf="isShowLoader && cardsList.length <= 0" class="spx-flex spx-loader">
+      <div class="spx-loader-backdrop">
+        <div class="spx-container-loader"></div>
+        <div>Loading data...</div>
+      </div>
+    </div>
+    <!-- End - Show Loader-->
+    <app-cards-list [cardsList]="cardsList"></app-cards-list>
+  </div>

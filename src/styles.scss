@@ -1,0 +1,96 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+	background: #eee;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 13px;
+    margin: 0px;
+}
+.spx-flex {
+  display: flex;
+}
+.spx-grid {
+  display: grid;
+}
+.spx-margin-remove {
+  margin: 0;
+}
+.spx-text-center {
+  text-align: center;
+}
+.spx-padding-top05 {
+  padding-top: 0.5em;
+}
+
+.spx-padding-left05 {
+  padding-left: 0.5em;
+}
+
+/*Common css utilties*/
+.spx-page-heading {
+  margin: 5px 20px;
+}
+.spx-container {
+  max-width: 1440px;
+  margin: auto;
+}
+.spx-text-light{
+font-weight:300;
+}
+.spx-border-radius04{
+	border-radius:4px;
+}
+.spx-margin-remove{
+margin:0px;
+}
+.spx-flex-middle {
+  align-items: center;
+}
+.spx-flex-center {
+  justify-content: center;
+}
+.spx-loader {
+  width: 100%;
+  /* flex-wrap: inherit; */
+  @extend .spx-flex-middle;
+  /* text-align: center; */
+  @extend .spx-flex-center;
+
+  .spx-container-loader {
+    margin: 1em;
+    display: inline-block;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    border-top: 3px solid #0044E9;
+    border-right: 3px solid transparent;
+    animation: loader-animation .7s linear infinite;
+  }
+
+  .spx-loader-backdrop {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    @extend .spx-flex-center;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+    background-color: rgba(30, 76, 130, 0.64);
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    color: #fff;
+  }
+}
+
+@keyframes loader-animation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spx-animation-fade{
+    animation-name: uk-fade;
+    animation-duration: .8s;
+    animation-timing-function: linear;
+}

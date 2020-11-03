@@ -1,0 +1,33 @@
+<div class="spx-grid spx-card-item" *ngIf="cardsList && cardsList.length > 0">
+  <div
+    class="spx-card-inner-item spx-border-radius04 spx-animation-fade"
+    *ngFor="let cardItem of cardsList"
+  >
+    <img src="{{ cardItem.links.mission_patch_small }}" />
+    <h4 class="launch-title spx-margin-remove spx-padding-top05">
+      {{ cardItem.mission_name }} #{{ cardItem.flight_number }}
+    </h4>
+    <h4 class="spx-margin-remove spx-padding-top05">Mission Ids:</h4>
+    <ul *ngIf="cardItem.mission_id && cardItem.mission_id.length>0">
+		<li *ngFor="let id of cardItem.mission_id">{{ id }}</li>	
+	</ul>
+    <div class="spx-flex">
+      <h4 class="spx-margin-remove spx-padding-top05">Launch Year:</h4>
+      <p class="spx-margin-remove spx-padding-top05 spx-padding-left05">
+        {{ cardItem.launch_year }}
+      </p>
+    </div>
+    <div class="spx-flex">
+      <h4 class="spx-margin-remove spx-padding-top05">Successful<br/>Launch:</h4>
+      <p class="spx-margin-remove spx-padding-top05 spx-padding-left05">
+        {{ cardItem.launch_success }}
+      </p>
+    </div>
+    <div class="spx-flex">
+      <h4 class="spx-margin-remove spx-padding-top05">Successful<br/>Landing:</h4>
+      <p class="spx-margin-remove spx-padding-top05 spx-padding-left05">
+        {{ cardItem.rocket.first_stage.cores[0].land_success }}
+      </p>
+    </div>
+  </div>
+</div>

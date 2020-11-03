@@ -1,0 +1,45 @@
+<nav class="filter-sidebar spx-border-radius04">
+  <h3 class="main-heading">Filters</h3>
+  <div class="spx-text-center"><span class="sub-header sub-header-2x">Launch Year</span></div>
+  <span class="spx-grid">
+    <div class="filter-item-wrapper" *ngFor="let year of years">
+      <button
+        class="filter-item"
+        [ngClass]="{
+          'spx-selected-filter': year.isSelected || year.value == appliedYear
+        }"
+        (click)="applyFilter('years', year, 'appliedYear')"
+      >
+        {{ year.value }}
+      </button>
+    </div>
+  </span>
+    <div class="spx-text-center"><span class="sub-header sub-header-1x">Successful Launch</span></div>
+  <span class="spx-grid">
+    <div class="filter-item-wrapper" *ngFor="let launch of launchValues">
+      <button
+        class="filter-item"
+        [ngClass]="{
+          'spx-selected-filter': launch.isSelected || launch.value == isLaunched
+        }"
+        (click)="applyFilter('launchValues', launch, 'isLaunched')"
+      >
+        {{ launch.value }}
+      </button>
+    </div>
+  </span>
+  <div class="spx-text-center"><span class="sub-header sub-header-1x">Successful Landing</span></div>  
+  <span class="spx-grid">
+    <div class="filter-item-wrapper" *ngFor="let landing of landingValues">
+      <button
+        class="filter-item"
+        [ngClass]="{
+          'spx-selected-filter': landing.isSelected || landing.value == isLanded
+        }"
+        (click)="applyFilter('landingValues', landing, 'isLanded')"
+      >
+        {{ landing.value }}
+      </button>
+    </div>
+  </span>
+</nav>
