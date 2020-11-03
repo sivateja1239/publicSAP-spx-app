@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
-import { CardDetails } from 'src/app/shared/models/app-models';
-import { DashboardService } from 'src/app/shared/service/dashboard.service';
+import { CardDetails } from '../../shared/models/app-models';
+import { DashboardService } from '../../shared/service/dashboard.service';
 
 @Component({
   selector: 'app-home',
