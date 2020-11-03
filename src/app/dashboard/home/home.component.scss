@@ -2,19 +2,22 @@
   justify-items: center;
   grid-template-columns: 1fr 4fr;
 }
+.container {
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
 @media screen and (max-width: 700px) {
   .component-wrapper {
     grid-template-columns: none !important;
     justify-items: stretch;
   }
 }
-@media screen and (max-width: 1024px) {
-
+@media screen and (max-width: 1020px) {
 }
 
-@media screen and (min-width: 1441px) {
+@media screen and (max-width: 1440px) {
   .container {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
     justify-items: center;
   }
 }
